@@ -27,7 +27,7 @@ pipeline {
 		stage ("Dependency Check with Python Safety"){
 			steps{
 				sh "safety check -i *"
-				sh "safety check --json > report.json"
+// 				sh "safety check --json > report.json"
 			}
 		}
 		stage ("Static Analysis with python-taint"){

@@ -28,6 +28,7 @@ pipeline {
 			steps{
 				sh "safety check -r requirements.txt"
 // 				sh "safety check --json > report.json"
+				echo "test trigger"
 			}
 		}
 // 		stage ("Static Analysis with python-taint"){

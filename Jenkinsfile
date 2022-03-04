@@ -32,7 +32,7 @@ pipeline {
 		}
 		stage ("Static Analysis with python-taint"){
 			steps{
-				sh "pyt ."
+				sh "pyt Jenkinsfile"
 			}
 		}					
 	}

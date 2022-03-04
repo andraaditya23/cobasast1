@@ -21,18 +21,18 @@ pipeline {
 		}
 		stage ("Python Bandit Security Scan"){
 			steps{
-				sh "docker run --rm --volume \$(pwd) secfigo/bandit:latest"
+				sh "bandit -r ."
 			}
 		}
 		stage ("Dependency Check with Python Safety"){
 			steps{
-				sh "docker run --rm --volume \$(pwd) pyupio/safety:latest safety check"
-				sh "docker run --rm --volume \$(pwd) pyupio/safety:latest safety check --json > report.json"
+				sh "safety check"
+				sh "safety check --json > report.json"
 			}
 		}
 		stage ("Static Analysis with python-taint"){
 			steps{
-				sh "docker run --rm --volume \$(pwd) vickyrajagopal/python-taint-docker pyt ."
+				sh "pyt ."
 			}
 		}					
 	}

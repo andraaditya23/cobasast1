@@ -30,10 +30,10 @@ pipeline {
 // 				sh "safety check --json > report.json"
 			}
 		}
-		stage ("Static Analysis with python-taint"){
-			steps{
-				sh "pyt Jenkinsfile"
-			}
-		}					
+// 		stage ("Static Analysis with python-taint"){
+// 			steps{
+// 				sh "pyt Jenkinsfile"
+// 			}
+// 		}					
 	}
 }

@@ -26,7 +26,7 @@ pipeline {
 		}
 		stage ("Dependency Check with Python Safety"){
 			steps{
-				sh "safety check -i *"
+				sh "safety check -r requirements.txt"
 // 				sh "safety check --json > report.json"
 			}
 		}

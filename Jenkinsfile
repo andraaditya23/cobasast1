@@ -21,7 +21,7 @@ pipeline {
 		}
 		stage ("Python Bandit Security Scan"){
 			steps{
-				sh "bandit -r ."
+				sh "bandit --exit-zero -r ."
 			}
 		}
 		stage ("Dependency Check with Python Safety"){

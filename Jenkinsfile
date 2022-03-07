@@ -11,7 +11,7 @@ pipeline {
 		stage (" Snyk Scanner"){
 			steps{
 				echo "Snyk Scanner"
-				sh "snyk code test --json-file-output=result.json"
+				sh "snyk code test -d --json > result_Snyk.json"
 			}
 		}
 // 		stage ("Python Flask Prepare"){

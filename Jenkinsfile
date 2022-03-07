@@ -10,6 +10,7 @@ pipeline {
 		}
 		stage (" Snyk Scanner"){
 			steps{
+				echo "Snyk Scanner"
 				sh "snyk code test --json-file-output=result.json"
 			}
 		}

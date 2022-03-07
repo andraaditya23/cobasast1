@@ -8,7 +8,7 @@ pipeline {
 				sh "ls"
 			}
 		}
-		stage (" Snyk Scanner"{
+		stage (" Snyk Scanner"){
 			steps{
 				sh "snyk code test --json-file-output=result.json"
 			}
